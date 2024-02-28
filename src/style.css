@@ -14,7 +14,7 @@
   height: 10vh; 
 }
 
-header {
+.modelo-caja {
   /* cuadros de las metricas*/
   background-color: rgb(61, 61, 56);
   border: rgb(250, 247, 247) 2px solid;
