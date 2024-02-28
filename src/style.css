@@ -1,0 +1,73 @@
+.titulo-app { 
+  /*analizador de texto */
+  background-color: rgb(217, 210, 210);
+  border-radius: 50px;
+  padding: 20px 30px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 30px;
+ 
+}
+.posicion-titulo{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 10vh; 
+}
+
+header {
+  /* cuadros de las metricas*/
+  background-color: rgb(61, 61, 56);
+  border: rgb(250, 247, 247) 2px solid;
+  border-radius: 30px;
+  font-size: 18px;
+  padding: 15px 30px;
+  color: white;
+  flex: 29%; /* permite que los cuadrados ocupen % de la pantalla en dos columnas*/
+  margin-block-start: 5px;
+  font-family: "Gill Sans", sans-serif;
+  width: 200px;
+  height: 50px; 
+}
+
+.container { /* para hacer columnas*/
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en la siguiente línea si no hay suficiente espacio */
+  list-style-type: none; /* Elimina los estilos predeterminados de lista */
+}
+textarea[name="user-input"]{/* textarea OK*/
+  padding: 10px;
+  width: 89%;
+  height: 130px;
+  margin: 73px; 
+  margin-block-start: 15px;
+  border-radius: 30px;
+}
+
+#reset-button {/* estructura button OK*/ 
+  padding: 10px;
+  width: 15%;
+  height: 50px;
+  border-radius: 30px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 40px;
+  color: rgb(234, 118, 118);
+  font-size: 18px;
+}
+
+.fondo { /* colores de fondo */
+  background-color: rgb(50, 50, 53);
+  color: rgb(234, 118, 118);
+}
+
+.posicion-boton { /* posicion del boton */
+  text-align: center;
+  position: relative;
+  top: -55px;
+  
+}
+footer {
+  text-align: right;
+  position: relative;
+  top: -62px;
+  
+}

@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Analizador de texto</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" type="module"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Analizador de texto</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body class="fondo">
+    <header>
+      <h1>
+        <div class="posicion-titulo">
+          <span class="titulo-app"> Analizador de texto </span>
+        </div>
+      </h1>
+      <ul class="container">
+        <li class="modelo-caja">
+          Carácteres:
+          <!-- OK 1Recuento de caracteres:contar el número de caracteres en el texto de entrada, incluidos espacios y signos de puntuación, y mostrar este recuento a la usuaria.-->
+          <div id="contador">0</div>
+          <!--cuando recargue pagina aparece un 0 -->
+        </li>
+        <li class="modelo-caja">
+          Carácteres sin espacios:
+          <!--2Recuento de caracteres excluyendo espacios y signos de puntuación: la aplicación debe poder contar el número de caracteres en el texto de entrada, excluyendo espacios y signos de puntuación, y mostrar este recuento a la usuaria.-->
+          <div id="sinespacio">0</div>
+        </li>
+        <li class="modelo-caja">
+          Palabras:
+          <!-- OK 3Recuento de palabras: la aplicación debe poder contar el número de palabras en el texto de entrada y mostrar este recuento a la usuaria-->
+          <div id="palabras">0</div>
+        </li>
+        <li class="modelo-caja">
+          Números:
+          <!-- OK 4Recuento de números: la aplicación debe contar cúantos números hay en el texto de entrada y mostrar este recuento a la usuaria.-->
+          <div id="numero">0</div>
+        </li>
+        <li class="modelo-caja">
+          Suma de números:
+          <!--OK 5 Suma total de números: la aplicación debe sumar todos los números que hay en el texto de entrada y mostrar el resultado a la usuaria.-->
+          <div id="suma">0</div>
+        </li>
 
-<body>
-  <script src="index.js" type="module"></script>
-</body>
+        <li class="modelo-caja">
+          Promedio longitud:
+          <!--Longitud media de las palabras: la aplicación debe calcular la longitud media de las palabras en el texto de entrada y mostrársela a la usuaria.-->
+          <div id="promedio">0</div>
+        </li>
+      </ul>
+    </header>
+    <textarea
+      name="user-input"
+      rows="5"
+      cols="33"
+      autocomplete="off"
+    ></textarea>
+    <!-- tamaño del input -->
+    <div class="posicion-boton">
+      <button type="button" id="reset-button">
+        Limpiar
+      </button>
+    </div>
+    <footer>
+      <p style="position: relative; left: -62px">Nicole C. Aburto Olave</p>
+    </footer>
+  </body>
 </html>
