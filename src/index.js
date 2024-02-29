@@ -17,17 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("sinespacio").innerHTML = '0';
     document.getElementById("promedio").innerHTML = '0';
   });
-
+  const elementosLi = document.querySelectorAll('.elemento-caja');
+  console.log (elementosLi);
   const textarea = document.querySelector("[name='user-input']"); //al query busca elemento .areatexto, la variable contiene que sepa que es el area text
-  const contador = document.querySelector("#contador"); // 1
-  const palabra1 = document.querySelector("#palabras"); // 3
-  const numeros = document.querySelector("#numero"); // 4
-  const suma1 = document.querySelector("#suma"); // 5
-  const totalPalabra = document.querySelector("#sinespacio"); // 2
-  const longuitud = document.querySelector('#promedio'); //6
+  const contador = elementosLi[0]; // 1
+  const palabra1 = elementosLi[2]; // 3
+  const numeros = elementosLi[3]; // 4
+  const suma1 = elementosLi[4]; // 5
+  const totalPalabra = elementosLi[1]; // 2
+  const longuitud = elementosLi[5]; //6
+
+
 
   textarea.addEventListener("input", function () { //1contador caracteres 
-    contador.innerHTML = textarea.value.length;
+    contador.innerHTML = "Caràcteres:"+ " " + analyzer.getCharacterCount(textarea.value);
     //cuando event listener escucha un evento en textarea, se activa el input, se ejecuta funcion
 
     let text = textarea.value.trim(); // limpia el texto, solo inicio y final del texto.
@@ -69,11 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     longuitudPromedio = sumaPalabras / contadorPalabras; //6 longuitud promedio
 
-    totalPalabra.innerHTML = analyzer.getCharacterCountExcludingSpaces(textarea.value);// 2 Recuento de caracteres excluyendo espacios y signos de puntuación: la aplicación debe poder contar el número de caracteres en el texto
-    palabra1.innerHTML = analyzer.getWordCount(textarea.value); // 3 recuento de palabras: la aplicación debe poder contar el número de palabras en el texto de entrada
-    numeros.innerHTML = analyzer.getNumberCount(textarea.value);// 4 Recuento de números: la aplicación debe contar cúantos números hay en el texto de entrada
-    suma1.innerHTML = analyzer.getNumberSum(textarea.value); // 5 Suma total de números: la aplicación debe sumar todos los números que hay en el texto de entrada 
-    longuitud.innerHTML = analyzer.getAverageWordLength(textarea.value); // 6 Longitud media de las palabras: la aplicación debe calcular la longitud media de las palabras en el texto
+    totalPalabra.innerHTML = "Carácteres sin espacios:" + " " + analyzer.getCharacterCountExcludingSpaces(textarea.value);// 2 Recuento de caracteres excluyendo espacios y signos de puntuación: la aplicación debe poder contar el número de caracteres en el texto
+    palabra1.innerHTML = "Palabras:" + " " + analyzer.getWordCount(textarea.value); // 3 recuento de palabras: la aplicación debe poder contar el número de palabras en el texto de entrada
+    numeros.innerHTML = "Números:" + " " + analyzer.getNumberCount(textarea.value);// 4 Recuento de números: la aplicación debe contar cúantos números hay en el texto de entrada
+    suma1.innerHTML = "Suma de números:"+ " " + analyzer.getNumberSum(textarea.value); // 5 Suma total de números: la aplicación debe sumar todos los números que hay en el texto de entrada 
+    longuitud.innerHTML = "Promedio Longuitud:" + " " + analyzer.getAverageWordLength(textarea.value); // 6 Longitud media de las palabras: la aplicación debe calcular la longitud media de las palabras en el texto
     
   });
 });

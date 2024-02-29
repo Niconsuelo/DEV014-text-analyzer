@@ -16,7 +16,7 @@ const analyzer = {
 
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-
+    return text.length;
 
   },
   getCharacterCountExcludingSpaces: (text) => {
@@ -135,10 +135,13 @@ const analyzer = {
     let arregloPalabras = text.split(" ");
 
     for (let i = 0; i < arregloPalabras.length; i++) {
-      let palabraNumeros = Number(arregloPalabras[i]);
+      if (arregloPalabras[i] !== "") {
+        let palabraNumeros = Number(arregloPalabras[i]);
       if (!isNaN(palabraNumeros)) {
         sumaNumeros = palabraNumeros + sumaNumeros;
       }
+      }
+      
     }
     return sumaNumeros;
   },
