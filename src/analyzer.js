@@ -1,9 +1,10 @@
 const analyzer = {
-  getWordCount: (text) => { //3----[2] OK
-   
+  getWordCount: (text) => {
+    //3----[2] OK
+
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
 
-    let arregloPalabras = text.split(" ");
+    const arregloPalabras = text.split(" ");
     let contadorPalabras = 0;
 
     for (let i = 0; i < arregloPalabras.length; i++) {
@@ -14,16 +15,19 @@ const analyzer = {
     }
     return contadorPalabras;
   },
-  getCharacterCount: (text) => { // 1 ----[0] OK
-  
+  getCharacterCount: (text) => {
+    // 1 ----[0] OK
+
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
     return text.length;
   },
-  getCharacterCountExcludingSpaces: (text) => { // 2 ----[1] OK
-    
+
+  getCharacterCountExcludingSpaces: (text) => {
+    // 2 ----[1] OK
+
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
-    let arregloPalabras = text.split(" ");
-    let SignosPuntuacion = [
+    const arregloPalabras = text.split(" ");
+    const SignosPuntuacion = [
       "!",
       "¡",
       "?",
@@ -44,24 +48,23 @@ const analyzer = {
       "{",
       "}",
     ];
-    let caracteresSinespacio = 0;
+    let sinespacioSinsignos = 0;
 
     for (let i = 0; i < arregloPalabras.length; i++) {
       if (arregloPalabras[i] !== "") {
-        if (!SignosPuntuacion.includes(arregloPalabras[i])) {
-          //si es falso, entra
-          caracteresSinespacio = caracteresSinespacio + arregloPalabras[i].length;
+        for (let j = 0; j < arregloPalabras[i].length; j++) {//el indice j no puede ser mayor o igual al largo de la palabra
+          if (!SignosPuntuacion.includes(arregloPalabras[i][j])) {//el largo de un arreglo, es mayor a 1 mas que el indice//
+            sinespacioSinsignos = sinespacioSinsignos + 1;
+          }
         }
       }
-
-      //arregloPalabras[i] // haga un filtro, y me diga si es un signo o no.
     }
-    return caracteresSinespacio;
+    return sinespacioSinsignos;
   },
   getAverageWordLength: (text) => {
     //6 TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
-    let arregloPalabras = text.split(" ");
-    let SignosPuntuacion = [
+    const arregloPalabras = text.split(" ");
+    const SignosPuntuacion = [
       "!",
       "¡",
       "?",
@@ -90,37 +93,39 @@ const analyzer = {
         contadorPalabras = contadorPalabras + 1;
         if (!SignosPuntuacion.includes(arregloPalabras[i])) {
           //si es falso, entra
-          caracteresSinespacio = caracteresSinespacio + arregloPalabras[i].length;
+          caracteresSinespacio =
+            caracteresSinespacio + arregloPalabras[i].length;
         }
       }
 
       //arregloPalabras[i] // haga un filtro, y me diga si es un signo o no.
     }
-return caracteresSinespacio / contadorPalabras;
-
+    return caracteresSinespacio / contadorPalabras;
   },
-  getNumberCount: (text) => { //4 ----[3] OK
+  getNumberCount: (text) => {
+    //4 ----[3] OK
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
-    let arregloPalabras = text.split(" ");
+    const arregloPalabras = text.split(" ");
     let totalNumeros = 0;
 
     for (let i = 0; i < arregloPalabras.length; i++) {
       if (arregloPalabras[i] !== "") {
-        let numero = Number(arregloPalabras[i]);
+        const numero = Number(arregloPalabras[i]);
         if (!isNaN(numero)) {
-          totalNumeros = totalNumeros + 1; 
+          totalNumeros = totalNumeros + 1;
         }
-      }  
+      }
     }
     return totalNumeros;
   },
-  getNumberSum: (text) => {// 5 --[4] OK
+  getNumberSum: (text) => {
+    // 5 --[4] OK
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-    let arregloPalabras = text.split(" ");
+    const arregloPalabras = text.split(" ");
     let sumaNumeros = 0;
     for (let i = 0; i < arregloPalabras.length; i++) {
       if (arregloPalabras[i] !== "") {
-        let numero = Number(arregloPalabras[i]);
+        const numero = Number(arregloPalabras[i]);
         if (!isNaN(numero)) {
           sumaNumeros = numero + sumaNumeros;
         }
