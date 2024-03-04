@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
   textarea.addEventListener("input", function () {
     //1contador caracteres
     contador.innerHTML =
-      "Caràcteres:" + " " + analyzer.getCharacterCount(textarea.value);
+      "Caracteres:" + " " + analyzer.getCharacterCount(textarea.value);
     //cuando event listener escucha un evento en textarea, se activa el input, se ejecuta funcion
 
     sinespacioSinsignos.innerHTML =
-      "Carácteres sin espacios:" +
+      "Caracteres sin espacios:" +
       " " +
       analyzer.getCharacterCountExcludingSpaces(textarea.value); // 2 Recuento de caracteres excluyendo espacios y signos de puntuación: la aplicación debe poder contar el número de caracteres en el texto
     palabra1.innerHTML =

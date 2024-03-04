@@ -81,7 +81,7 @@ const analyzer = {
     //4 ----[3] OK
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
 
-    const numerosfloatSinespacios = text.split(".").join(""); // necesito reemplazar los puntos por vacio
+    const numerosfloatSinespacios = text.split(".").join(""); // necesito cambiar los puntos por vacio
     const arregloPalabras = numerosfloatSinespacios.split(" "); // necesito dividir los numeros por un vacio
     let totalNumeros = 0;
 
