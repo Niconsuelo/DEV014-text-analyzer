@@ -5,7 +5,7 @@
 
 
 
-Contador de palabras, es una aplicación desarrollada para optimizar tiempos de usuarios que se desenvuelven en el mundo de la escritura.
+Contador de palabras, [NABU](https://niconsuelo.github.io/DEV014-text-analyzer/src/),  es una aplicación desarrollada para optimizar tiempos de usuarios que se desenvuelven en el mundo de la escritura.
 Enfocada en ser una plataforma intuitiva, de fácil manejo para personas que requieran eficiencia y rapidez a la hora de contar palabras.
 
 
@@ -24,7 +24,7 @@ Enfocada en ser una plataforma intuitiva, de fácil manejo para personas que req
 
 [![image.png](https://i.postimg.cc/XNdLb0JN/image.png)](https://postimg.cc/NLGm6SmZ)
 
-NABU, enfocada en ser una herrimienta que facilite al usuario escritor, permite que se puedan evaluar al instante seis métricas de conteo diferentes, además permite que el resultado sea visualizado en tiempo real a medida que el usuario escriba:
+[NABU](https://niconsuelo.github.io/DEV014-text-analyzer/src/), enfocada en ser una herrimienta que facilite al usuario escritor, permite que se puedan evaluar al instante seis métricas de conteo diferentes, además permite que el resultado sea visualizado en tiempo real a medida que el usuario escriba:
 
 * **Contador de palabras**.
 > Permite contar el número de palabras en el texto de entrada
@@ -43,6 +43,7 @@ NABU, enfocada en ser una herrimienta que facilite al usuario escritor, permite 
 
 * **Longitud media de las palabras**.
 > Permite calcular la longitud media de las palabras
+
 
 # Desiciones del proyecto
 Parte fundamental del inicio del proyecto fue tener claridad sobre el objetivo que quería llegar. Utilizar herramientas como Notion y utilizar el método REACTO fue la clave para mantener el orden del día a día.
