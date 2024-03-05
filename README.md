@@ -45,7 +45,7 @@ Enfocada en ser una plataforma intuitiva, de fácil manejo para personas que req
 > Permite calcular la longitud media de las palabras
 
 
-# Desiciones del proyecto
+# Decisiones del proyecto
 Parte fundamental del inicio del proyecto fue tener claridad sobre el objetivo que quería llegar. Utilizar herramientas como Notion y utilizar el método REACTO fue la clave para mantener el orden del día a día.
 
 Desde el primer momento, el objetivo se centró en realizar un proyecto integral, en donde el avance en HTML, CSS y JS, fuera de manera simultanea, evitando así que el proyecto se convierta en una aplicación funcional pero no agradable para el usuario.
